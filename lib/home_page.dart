@@ -12,6 +12,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context);
+/*
     return Scaffold(
         body: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,6 +36,63 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
     );
+*/
+  
+  return Scaffold(
+    body: Builder(
+      builder: (context) {
+        if(mediaQuery.orientation == Orientation.portrait) {
+          return portraitWidget(mediaQuery.size);
+        }else {
+          return landscapeWidget(mediaQuery.size);
+        }
+      },
+    ),
+  );
 
+  }
+
+  Widget portraitWidget(Size size) {
+    return Center(
+      child: Container(
+        width: size.width * 0.8,
+        height: size.height * 0.8,
+        decoration: BoxDecoration(
+          color: Colors.purple,
+        ),
+        child: Center(
+          child: Text(
+            "Portrait",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget landscapeWidget(Size size) {
+    return Center(
+      child: Container(
+        width: size.width * 0.8,
+        height: size.height * 0.8,
+        decoration: BoxDecoration(
+          color: Colors.yellow,
+        ),
+        child: Center(
+          child: Text(
+            "Landscape",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

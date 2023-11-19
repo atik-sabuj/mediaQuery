@@ -39,9 +39,24 @@ class _HomePageState extends State<HomePage> {
 */
   
   return Scaffold(
-    body: Builder(
+
+    // we can use builder or Orientation Builder; both are same
+/*    body: Builder(
       builder: (context) {
         if(mediaQuery.orientation == Orientation.portrait) {
+          return portraitWidget(mediaQuery.size);
+        }else {
+          return landscapeWidget(mediaQuery.size);
+        }
+      },
+    ),*/
+
+
+  // we can use builder or Orientation Builder; both are same
+
+    body: OrientationBuilder(
+      builder: (context, orientation) {
+        if(orientation == Orientation.portrait) {
           return portraitWidget(mediaQuery.size);
         }else {
           return landscapeWidget(mediaQuery.size);
@@ -71,6 +86,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+
     );
   }
 

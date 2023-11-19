@@ -11,15 +11,17 @@ class PracticePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Responsive Design Example'),
       ),
-      body: Center(
-        child: LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constraints) {
-            if (constraints.maxWidth < 600) {
-              return _buildSmallScreenUI();
-            } else {
-              return _buildLargeScreenUI();
-            }
-          },
+      body: SingleChildScrollView(
+        child: Center(
+          child: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+              if (constraints.maxWidth < 600) {
+                return _buildSmallScreenUI();
+              } else {
+                return _buildLargeScreenUI();
+              }
+            },
+          ),
         ),
       ),
     );
@@ -34,13 +36,13 @@ class PracticePage extends StatelessWidget {
             height: 400,
             width: 300,
             color: Colors.red,
-            child: Text('Small Screen UI 1'),
+            child: Text('Potriat Screen Color 1'),
           ),
           Container(
             height: 300,
             width: 200,
             color: Colors.purple,
-            child: Text('Small Screen UI 2'),
+            child: Text('Potriat Screen Color 2'),
           ),
         ],
       ),
@@ -56,13 +58,13 @@ class PracticePage extends StatelessWidget {
             height: 400,
             width: 300,
             color: Colors.yellow,
-            child: Text('Big Screen UI 1'),
+            child: Text('Landscape Screen Color 1'),
           ),
           Container(
             height: 300,
             width: 200,
             color: Colors.pinkAccent,
-            child: Text('Big Screen UI 2'),
+            child: Text('Landscape Screen Color 2'),
           ),
         ],
       ),

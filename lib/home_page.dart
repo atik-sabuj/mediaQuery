@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -41,6 +41,7 @@ class _HomePageState extends State<HomePage> {
   return Scaffold(
 
     // we can use builder or Orientation Builder; both are same
+
 /*    body: Builder(
       builder: (context) {
         if(mediaQuery.orientation == Orientation.portrait) {

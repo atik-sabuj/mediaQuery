@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:task6/box_page.dart';
 import 'package:task6/home_page.dart';
 import 'package:task6/practice_page.dart';
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         );
       },
       //child: const HomePage(),
-      child: const PracticePage(),
+      child: const BoxPage(),
     );
   }
 }

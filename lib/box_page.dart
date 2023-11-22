@@ -20,7 +20,7 @@ class _BoxPageState extends State<BoxPage> {
             padding: EdgeInsets.all(MediaQuery.of(context).size.width > 600 ? 40.0 : 20.0,),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   //width: mediaQuery.size.width * 0.7,

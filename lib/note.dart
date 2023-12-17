@@ -68,6 +68,18 @@ class PracticePage extends StatelessWidget {
             color: Colors.pinkAccent,
             child: Text('Landscape Screen Color 2'),
           ),
+          Container(
+            height: 200,
+            width: 200,
+            color: Colors.purple,
+            child: Text('Landscape Screen Color 3'),
+          ),
+          Container(
+            height: 200,
+            width: 150,
+            color: Colors.blue,
+            child: Text('Landscape Screen Color 4'),
+          ),
         ],
       ),
     );

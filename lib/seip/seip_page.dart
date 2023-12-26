@@ -447,9 +447,44 @@ class _SeipPageState extends State<SeipPage> {
               child: Column(
                 children: [
 
-                  Padding(
-                    padding: const EdgeInsets.only(left: 12.0, right: 12),
-                  ), //drop down
+                  // Padding(
+                  //   padding: const EdgeInsets.only(left: 12.0, right: 12),
+                  //   child: DropdownButtonFormField(
+                  //     validator: (value) {
+                  //       if (value == null) {
+                  //         return 'Select a Course';
+                  //       } else {
+                  //         return null;
+                  //       }
+                  //     },
+                  //     decoration: const InputDecoration(
+                  //       border: OutlineInputBorder(
+                  //           borderSide: BorderSide(color: Color(0xff000054)),
+                  //           borderRadius:
+                  //           BorderRadius.all(Radius.circular(12))),
+                  //     ),
+                  //     hint: Text('Select Course'),
+                  //     value: _course,
+                  //     onChanged: (value) {
+                  //       setState(() {
+                  //         _course = value;
+                  //       });
+                  //     },
+                  //     items: courseList
+                  //         .map((e) => DropdownMenuItem(
+                  //       child: SizedBox(child: new Text(e)),
+                  //       value: e,
+                  //     ))
+                  //         .toList(),
+                  //   ),
+                  // )
+
+
+
+
+
+
+                  //drop down
                   Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: ListView(

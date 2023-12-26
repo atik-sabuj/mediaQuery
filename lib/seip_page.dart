@@ -4,6 +4,7 @@ import 'dart:io';
 //import 'package:art_sweetalert/art_sweetalert.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:task6/seip_overview.dart';
 // import 'package:flutter_easyloading/flutter_easyloading.dart';
 // import 'package:image_picker/image_picker.dart';
 // import 'package:intl/intl.dart';
@@ -193,8 +194,8 @@ class _SeipPageState extends State<SeipPage> {
             ),
           ),
           showSeipPageButtons(context),
-          //if (showOverViewTab) SeipOverview(),
-          // if (showSeipTab)  SeipRegForm(context),
+          if (showOverViewTab) SeipOverview(),
+           //if (showSeipTab)  SeipRegForm(context),
           if (showSeipTab)Center(child: Padding(padding: EdgeInsets.all(20),child: Text('SEIP Registration is closed for now.',style: TextStyle(fontSize: 20),),)),
           if(showAdmissionProcessTab) admissionProcessofSeip(),
 

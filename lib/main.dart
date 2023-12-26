@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task6/box_page.dart';
 import 'package:task6/home_page.dart';
 import 'package:task6/practice_page.dart';
+import 'package:task6/seip_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         );
       },
       //child: const HomePage(),
-      child: const BoxPage(),
+      child: SeipPage(),
     );
   }
 }

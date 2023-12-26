@@ -5,13 +5,14 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task6/seip/seip_overview.dart';
-// import 'package:flutter_easyloading/flutter_easyloading.dart';
-// import 'package:image_picker/image_picker.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+
+import 'models/student_model.dart';
+//import 'package:image_picker/image_picker.dart';
 // import 'package:intl/intl.dart';
 // import 'package:pencilbox_apk/custom/footer.dart';
 // import 'package:pencilbox_apk/custom/subscribe.dart';
-// import 'package:pencilbox_apk/models/seip_register_model.dart';
-// import 'package:pencilbox_apk/models/student_model.dart';
+//import 'package:pencilbox_apk/models/seip_register_model.dart';
 // import 'package:pencilbox_apk/utils/constants.dart';
 // import '../custom/header.dart';
 // import '../custom/menu.dart';
@@ -131,18 +132,18 @@ class _SeipPageState extends State<SeipPage> {
 
   @override
   void didChangeDependencies() {
-    // if (ModalRoute.of(context)!.settings.arguments != null) {
-    //   final studentInfo =
-    //       ModalRoute.of(context)!.settings.arguments as StudentModel;
-    //   if (studentInfo != null) {
-    //     setState(() {
-    //       _studentNameControler.text = studentInfo.name;
-    //       _studentPhoneControler.text = studentInfo.phone;
-    //       _studentEmailControler.text = studentInfo.email;
-    //       _course = studentInfo.course;
-    //     });
-    //   }
-    // }
+    if (ModalRoute.of(context)!.settings.arguments != null) {
+      final studentInfo =
+          ModalRoute.of(context)!.settings.arguments as StudentModel;
+      if (studentInfo != null) {
+        setState(() {
+          _studentNameControler.text = studentInfo.name;
+          _studentPhoneControler.text = studentInfo.phone;
+          _studentEmailControler.text = studentInfo.email;
+          _course = studentInfo.course;
+        });
+      }
+    }
     super.didChangeDependencies();
   }
 

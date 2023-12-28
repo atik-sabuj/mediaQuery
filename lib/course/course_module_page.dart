@@ -12,6 +12,7 @@ import 'package:expansion_tile_card/expansion_tile_card.dart';
 
 import 'course_model.dart';
 import 'course_module_provider.dart';
+import 'helper/helper_method.dart';
 
 class CourseModulePage extends StatefulWidget {
   @override
@@ -177,14 +178,14 @@ class _CourseModulePageState extends State<CourseModulePage>  {
                               const SizedBox(
                                 width: 5,
                               ),
-                              // Text(
-                              //   HelperMethod.getDateFormat('dd-MM-yyyy',
-                              //       DateTime.parse(courseModel.startDate!)),
-                              //   style: GoogleFonts.poppins(
-                              //       fontSize: 12,
-                              //       fontWeight: FontWeight.w500,
-                              //       color: Colors.grey),
-                              // ),
+                              Text(
+                                HelperMethod.getDateFormat('dd-MM-yyyy',
+                                    DateTime.parse(courseModel.startDate!)),
+                                style: GoogleFonts.poppins(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.grey),
+                              ),
                             ],
                           )
                         ],

@@ -12,6 +12,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'course_model.dart';
+import 'course_provider.dart';
+import 'helper/helper_constant.dart';
+import 'helper/helper_method.dart';
 
 class CoursePage extends StatefulWidget {
   const CoursePage({super.key});
@@ -28,11 +31,13 @@ class _CoursePageState extends State<CoursePage> {
     'Old courses',
     'All courses'
   ];
-  // late CourseProvider courseProvider;
-  // late TrainerProvider trainerProvider;
-  // late List<CourseModel> courseModelList;
+  late CourseProvider courseProvider;
+  //late TrainerProvider trainerProvider;
+  late List<CourseModel> courseModelList;
   int check = 0;
   List<String> favoriteList = [];
+
+  get trainerProvider => null;
 
   addToFavorite() async {
     final SharedPreferences favoritePrefs =
@@ -49,7 +54,7 @@ class _CoursePageState extends State<CoursePage> {
   @override
   void didChangeDependencies() {
     courseProvider = Provider.of(context);
-    //trainerProvider = Provider.of(context);
+    var trainerProvider = Provider.of(context);
     super.didChangeDependencies();
   }
 
@@ -76,8 +81,11 @@ class _CoursePageState extends State<CoursePage> {
     }
 
     return Scaffold(
-      appBar: MainAppBar(title: 'Course'),
-      drawer: HomePageDrawer(),
+      appBar: AppBar(
+          title: Text('Course'),
+      //drawer: HomePageDrawer(),
+    ),
+
       body: Container(
         margin: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 20),
         child: Column(

@@ -98,8 +98,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //import 'package:screen_design/provider/user_provider.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'course/course_module_page.dart';
 import 'course/course_module_provider.dart';
@@ -108,8 +108,8 @@ import 'course/course_provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+  //await Firebase.initializeApp();
+  //FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   runApp(MultiProvider(providers: [
      ChangeNotifierProvider(create: (_) => CourseProvider()),
     // ChangeNotifierProvider(create: (_) => TrainerProvider()..getTrainerServiceData()),
@@ -125,11 +125,11 @@ Future<void> main() async {
 }
 
 @pragma('vm:entry-point')
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async{
-  await Firebase.initializeApp();
-  print('Background ${message.notification!.title.toString()}');
-  print('Data ${message.data.toString()}');
-}
+// Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async{
+//   await Firebase.initializeApp();
+//   print('Background ${message.notification!.title.toString()}');
+//   print('Data ${message.data.toString()}');
+// }
 
 
 class MyApp extends StatelessWidget {
@@ -148,7 +148,8 @@ class MyApp extends StatelessWidget {
         ),
         primarySwatch: Colors.amber,
       ),
-      initialRoute: '/',
+      home: CoursePage(),
+      //initialRoute: '/',
       routes: {
         // '/': (_) => LandingPage(),
         // 'home_page': (_) => HomePage(),
@@ -157,7 +158,7 @@ class MyApp extends StatelessWidget {
         // 'registration_screen': (_) => RegistrationPage(),
         // 'bottom_nav_screen': (_) => BottomNavigationPage(),
         // 'category_detail_screen': (_) => CategoryDetailPage(),
-         'course_module-page': (_) => CourseModulePage(),
+        // 'course_module-page': (_) => CourseModulePage(),
         // 'read_blog_page': (_) => ReadBlogPage(),
         // 'blog_list_page': (_) => BlogListPage(),
         // 'edit_profile_page': (_) => EditProfilePage(),
@@ -172,7 +173,7 @@ class MyApp extends StatelessWidget {
         // 'notification_page': (_) => NotificationPage(),
         // 'notification_controller': (_) => NotificationController(),
         // 'review_page': (_) => ReviewPage(),
-         'course_page': (_) => CoursePage(),
+         //'course_page': (_) => CoursePage(),
         // 'my_course_page': (_) => MyCoursePage(),
         // 'profile_page': (_) => ProfilePage(),
         // 'course_module_page': (_) => CourseModulePage(),

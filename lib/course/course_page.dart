@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:screen_design/custom/main_app_bar.dart';
-import 'package:screen_design/helper/helper_constant.dart';
-import 'package:screen_design/models/course_model.dart';
-import 'package:screen_design/provider/course_provider.dart';
+// import 'package:screen_design/custom/main_app_bar.dart';
+// import 'package:screen_design/helper/helper_constant.dart';
+// import 'package:screen_design/models/course_model.dart';
+// import 'package:screen_design/provider/course_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:screen_design/provider/trainer_provider.dart';
-import '../custom/home_page_drawer.dart';
-import '../helper/helper_method.dart';
+// import 'package:screen_design/provider/trainer_provider.dart';
+// import '../custom/home_page_drawer.dart';
+// import '../helper/helper_method.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'course_model.dart';
 
 class CoursePage extends StatefulWidget {
   const CoursePage({super.key});
@@ -26,9 +28,9 @@ class _CoursePageState extends State<CoursePage> {
     'Old courses',
     'All courses'
   ];
-  late CourseProvider courseProvider;
-  late TrainerProvider trainerProvider;
-  late List<CourseModel> courseModelList;
+  // late CourseProvider courseProvider;
+  // late TrainerProvider trainerProvider;
+  // late List<CourseModel> courseModelList;
   int check = 0;
   List<String> favoriteList = [];
 
@@ -47,7 +49,7 @@ class _CoursePageState extends State<CoursePage> {
   @override
   void didChangeDependencies() {
     courseProvider = Provider.of(context);
-    trainerProvider = Provider.of(context);
+    //trainerProvider = Provider.of(context);
     super.didChangeDependencies();
   }
 

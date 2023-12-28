@@ -37,12 +37,43 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_screenutil: ^5.9.0
   http:
-  flutter_easyloading: ^3.0.5
-  url_launcher: ^6.2.2
+  path_provider: ^2.1.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  provider: ^6.1.1
+  intl: ^0.18.1
+  carousel_slider: ^4.2.1
+  dots_indicator: ^3.0.0
+  cached_network_image: ^3.3.0
+  auto_size_text: ^3.0.0
+  art_sweetalert: ^0.0.5
+  flutter_html: ^3.0.0-beta.2
+  share_plus: ^7.2.1
+  url_launcher: ^6.2.1
+  google_fonts: ^6.1.0
+  flutter_svg: ^2.0.9
+  simple_circular_progress_bar: ^1.0.2
+  flutter_easyloading: ^3.0.5
+  shared_preferences: ^2.2.2
+  email_validator: ^2.1.17
+  fluttertoast: ^8.2.4
+  expansion_tile_card: ^3.0.0
+  flutter_rating_bar: ^4.0.1
+  google_maps_flutter: ^2.5.0
+  store_redirect: ^2.0.1
+  connectivity_plus: ^5.0.2
+  new_version_plus: ^0.0.11
+  upgrader: ^8.3.0
+  aamarpay: ^1.0.7
+  flutter_bkash: ^0.2.0
+  firebase_core: ^2.23.0
+  firebase_messaging: ^14.7.5
+  flutter_local_notifications: ^16.2.0
+  app_settings: ^5.1.1
+  device_info_plus: ^9.1.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

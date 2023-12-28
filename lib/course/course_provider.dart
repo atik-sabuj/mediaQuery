@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:screen_design/service/course_service.dart';
-import '../models/course_model.dart';
 import 'package:intl/intl.dart';
+
+import 'course_model.dart';
+import 'course_service.dart';
 
 class CourseProvider extends ChangeNotifier {
   List<CourseModel> fullCourseList = [];

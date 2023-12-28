@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:screen_design/helper/helper_method.dart';
-import 'package:screen_design/models/course_model.dart';
+//import 'helper/helper_method.dart';
+//import 'models/course_model.dart';
 import 'package:provider/provider.dart';
-import 'package:screen_design/models/trainer_model.dart';
-import 'package:screen_design/provider/course_module_provider.dart';
+//import 'models/trainer_model.dart';
+//import 'provider/course_module_provider.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:screen_design/provider/trainer_provider.dart';
+//import 'provider/trainer_provider.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:expansion_tile_card/expansion_tile_card.dart';
+
+import 'course_model.dart';
+import 'course_module_provider.dart';
 
 class CourseModulePage extends StatefulWidget {
   @override
@@ -17,22 +20,22 @@ class CourseModulePage extends StatefulWidget {
 
 class _CourseModulePageState extends State<CourseModulePage>  {
   late CourseModel courseModel;
-  late TrainerModel trainerModel;
+  //late TrainerModel trainerModel;
   late CourseModuleProvider courseModuleProvider;
-  late TrainerProvider trainerProvider;
+  //late TrainerProvider trainerProvider;
   bool callOnce = true;
 
   @override
   void didChangeDependencies() {
     courseModel = ModalRoute.of(context)?.settings.arguments as CourseModel;
     courseModuleProvider = Provider.of(context, listen: true);
-    trainerProvider = Provider.of(context);
-    if (callOnce) {
-      courseModuleProvider.getFilteredCourseModuleList(int.parse(courseModel.trainingId!));
-      trainerModel =
-          trainerProvider.getTrainerInfoByTrainingId(int.parse(courseModel.trainerId!));
-      callOnce = false;
-    }
+    // trainerProvider = Provider.of(context);
+    // if (callOnce) {
+    //   courseModuleProvider.getFilteredCourseModuleList(int.parse(courseModel.trainingId!));
+    //   trainerModel =
+    //       trainerProvider.getTrainerInfoByTrainingId(int.parse(courseModel.trainerId!));
+    //   callOnce = false;
+    // }
     super.didChangeDependencies();
   }
 
@@ -69,50 +72,50 @@ class _CourseModulePageState extends State<CourseModulePage>  {
                         Image.asset('images/placeholder.png'),
                   ),
                 ),
-                Positioned(
-                  bottom: 0,
-                  left: 15,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.of(context).pushNamed('Trainer_details_page',
-                          arguments: trainerModel);
-                    },
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(19)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(3),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            ClipOval(
-                              child: CachedNetworkImage(
-                                height: 35,
-                                width: 35,
-                                imageUrl:
-                                    'https://pencilbox.edu.bd/${trainerModel.trainerImage}',
-                                placeholder: (context, url) =>
-                                    CircularProgressIndicator(),
-                                errorWidget: (context, url, error) =>
-                                    Image.asset('images/placeholder.png'),
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              trainerModel.trainerName!,
-                              style: GoogleFonts.poppins(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.black),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                // Positioned(
+                //   bottom: 0,
+                //   left: 15,
+                //   child: InkWell(
+                //     onTap: () {
+                //       Navigator.of(context).pushNamed('Trainer_details_page',
+                //           arguments: trainerModel);
+                //     },
+                //     child: Card(
+                //       shape: RoundedRectangleBorder(
+                //           borderRadius: BorderRadius.circular(19)),
+                //       child: Padding(
+                //         padding: const EdgeInsets.all(3),
+                //         child: Row(
+                //           mainAxisSize: MainAxisSize.min,
+                //           children: [
+                //             ClipOval(
+                //               child: CachedNetworkImage(
+                //                 height: 35,
+                //                 width: 35,
+                //                 imageUrl:
+                //                     'https://pencilbox.edu.bd/${trainerModel.trainerImage}',
+                //                 placeholder: (context, url) =>
+                //                     CircularProgressIndicator(),
+                //                 errorWidget: (context, url, error) =>
+                //                     Image.asset('images/placeholder.png'),
+                //               ),
+                //             ),
+                //             const SizedBox(
+                //               width: 5,
+                //             ),
+                //             Text(
+                //               trainerModel.trainerName!,
+                //               style: GoogleFonts.poppins(
+                //                   fontSize: 14,
+                //                   fontWeight: FontWeight.w400,
+                //                   color: Colors.black),
+                //             )
+                //           ],
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
             SizedBox(
@@ -174,14 +177,14 @@ class _CourseModulePageState extends State<CourseModulePage>  {
                               const SizedBox(
                                 width: 5,
                               ),
-                              Text(
-                                HelperMethod.getDateFormat('dd-MM-yyyy',
-                                    DateTime.parse(courseModel.startDate!)),
-                                style: GoogleFonts.poppins(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.grey),
-                              ),
+                              // Text(
+                              //   HelperMethod.getDateFormat('dd-MM-yyyy',
+                              //       DateTime.parse(courseModel.startDate!)),
+                              //   style: GoogleFonts.poppins(
+                              //       fontSize: 12,
+                              //       fontWeight: FontWeight.w500,
+                              //       color: Colors.grey),
+                              // ),
                             ],
                           )
                         ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/course_module_model.dart';
-import '../service/course_module_service.dart';
+import 'course_module_model.dart';
+import 'course_module_service.dart';
 
 class CourseModuleProvider extends ChangeNotifier {
   List<CourseModuleModel> courseModuleList = [];

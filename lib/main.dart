@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:task6/box_page.dart';
-import 'package:task6/home_page.dart';
-import 'package:task6/practice_page.dart';
+import 'package:task6/course/course_page.dart';
+import 'package:task6/mediaquery/box_page.dart';
+import 'package:task6/mediaquery/home_page.dart';
+import 'package:task6/mediaquery/practice_page.dart';
 import 'package:task6/seip/seip_page.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         );
       },
       //child: const HomePage(),
-      child: SeipPage(),
+      child: CoursePage(),
     );
   }
 }
